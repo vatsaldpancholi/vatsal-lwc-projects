@@ -1,0 +1,53 @@
+<template>
+        <lightning-card title="Quiz App in LWC">
+            <div class="slds-m-around-medium">
+                <form>
+                    <template for:each={myQuestions} for:item=questionValues>
+                        <div key={questionValues.id} class="slds-m-bottom_medium" >
+                            <strong>
+                                {questionValues.id}:
+                                {questionValues.question}
+                            </strong>
+                            <div class="slds-grid slds-grid_vertical slds-p-bottom_medium">
+                                <div class="slds-col">
+                                    <input type="radio" name={questionValues.id} value="a" onchange={changeHandler}/>
+                                    <span>a. </span>
+                                    {questionValues.options.a}
+                                </div>
+                                <div class="slds-col">
+                                    <input type="radio" name={questionValues.id} value="b" onchange={changeHandler}/>
+                                    <span>b. </span>
+                                    {questionValues.options.b}
+                                </div>
+                                <div class="slds-col">
+                                    <input type="radio" name={questionValues.id} value="c" onchange={changeHandler}/>
+                                    <span>c. </span>
+                                    {questionValues.options.c}
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <lightning-button 
+                        variant="brand"
+                        type="submit"
+                        label="Submit Answers"
+                        disabled={allNotSelected}
+                        class="slds-m-around_small"
+                        onclick={submitHandler}>
+                    </lightning-button>
+                    <lightning-button 
+                        variant="brand"
+                        type="reset"
+                        label="Reset Quiz"
+                        class="slds-m-around_small"
+                        onclick={resetHandler}>
+                    </lightning-button>
+                </form>
+                <template lwc:if={showResult}>
+                    <div class={scoreColorBackground}>
+                        You have scored {correctOptions} out of {myQuestions.length}
+                    </div>
+                </template>
+            </div>
+        </lightning-card>
+</template>
