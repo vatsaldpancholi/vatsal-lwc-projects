@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Component Composition Example - Child">
+        <div class="slds-var-m-around_medium">
+            <h1>Hello from Child component</h1>
+        </div>
+    </lightning-card>
+    <lightning-card title="Query Selector example">
+        <div class="slds-var-m-around_medium">
+            <h1>Hey I am a heading</h1>
+            <template for:each={userNames} for:item="user">
+                <div class="name" key={user}>
+                    {user}
+                </div>
+            </template>
+            <div class="child" lwc:dom="manual">
+
+            </div>
+            <lightning-button
+                onclick={fetchDetailHandler} label="Fetch Details">
+            </lightning-button>
+        </div>
+    </lightning-card>
+
+    <!--lightning-card title="Inline Styling example">
+        <div class="slds-m-around_medium">
+            <div style="color:red; font-size:20px;">
+                Hello this is a Div tag
+            </div>
+        </div>
+    </lightning-card>
+    <lightning-card title="External CSS example">
+        <div class="slds-m-around_medium">
+            <div>
+                <p>Hello this is a Div tag</p>
+                <div class="divClass">This is 2nd Div tag</div>
+            </div>
+        </div>
+    </lightning-card-->
+    <lightning-card title="Design Token example">
+        <div class="slds-m-around_medium">
+            <div>
+                Hello this is a Div tag for Design Token/global styling hooks
+            </div>
+        </div>
+    </lightning-card>
+</template>

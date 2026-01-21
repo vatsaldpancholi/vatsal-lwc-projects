@@ -36,7 +36,7 @@
             <!--Conditional Rendering end-->
     </lightning-card>
 
-    <lightning-card title="For Each Example">
+    <!--lightning-card title="For Each Example">
         <div class="slds-var-m-around_medium">
             <ul class="slds-has-dividers_around-space">
                 <template for:each={carList} for:item="car">
@@ -44,9 +44,10 @@
                 </template>
             </ul>
         </div>
-    </lightning-card>
+    </lightning-card-->
 
-<lightning-card title="Iterator Example">
+    <!--lightning-card title="Iterator Example">
+
     <div class="slds-p-around_medium">       
         <ul class="slds-has-dividers_around-space">
             <template iterator:iter={ceoList}>
@@ -62,18 +63,22 @@
             </template>
         </ul>
     </div>
-</lightning-card>
+</lightning-card-->
 
-    <lightning-card title="For Each Example for objects">
+    <!--lightning-card title="For Each Example for objects">
         <div class="slds-var-m-around_medium">
             <ul class="slds-has-dividers_around-space">
                 <template for:each={ceoList} for:item="ceo">
-                <!--div key={car}>
-                    {car}
-                </div-->
                     <li key={ceo.id} class="slds-item" >{ceo.company} {ceo.name}</li>
                 </template>
             </ul>
+        </div>
+    </lightning-card-->
+
+    <lightning-card title="Component Composition Example - Parent">
+        <div class="slds-var-m-around_medium">
+            <h1>Hello from Parent component</h1>
+            <c-lwc_-Concepts_-I-I-I></c-lwc_-Concepts_-I-I-I>
         </div>
     </lightning-card>
 </template>

@@ -1,0 +1,61 @@
+<template>
+
+    <!--Component Communication - Child to Parent using simple event -->
+
+    <template lwc:if={showCardChildParentA}>
+        <lightning-modal-header>
+            Confirmation
+        </lightning-modal-header>
+        <lightning-modal-body>
+            <p>Successfully Created!</p>
+        </lightning-modal-body>
+        <lightning-modal-footer onclick={footerHandler}>
+            <lightning-button
+                label="Ok"
+                class="slds-button"
+                variant="brand"
+                onclick={handleCloseModel}
+            ></lightning-button>
+        </lightning-modal-footer> 
+    </template>
+
+    <!--Component Communication - Child to Parent -->
+
+    <lightning-card lwc:if={showCardChildParentB}>
+        <h1 style="font-size: 15px; font-weight: bold; color: black;">Use this to check - Action from Parent Component example:</h1>
+        <lightning-progress-bar value={progressBarValue} size="large"></lightning-progress-bar>    
+    </lightning-card>
+
+    <!--Component Communication - Action from Parent Component-->
+    
+    <lightning-card lwc:if={showCardChildParentC}>
+        <h1 style="font-size: 15px; font-weight: bold; color: black;">Use this to check - Child to parent example:</h1>
+        <lightning-slider label="Volume" value={sliderValue} onchange={sliderChangeHandler}></lightning-slider>    
+    </lightning-card>
+
+    <!--Component Communication - Primitive Datatype Parent Component-->
+
+    <lightning-card lwc:if={showCardChildParentD}>
+        <h1 style="font-size: 15px; font-weight: bold; color: black;">Component Communication - Primitive Datatype Child Component example:</h1>
+        <div class="slds-notify_alert slds-alert_error" role="alert">
+            {alertMessage}
+        </div>            
+    </lightning-card>
+
+    <!--Component Communication - Non-Primitive Datatype Parent Component-->
+
+    <lightning-card title={cardHeadingII} lwc:if={showCardChildParentE}>
+        <h1 style="font-size: 15px; font-weight: bold; color: black;">Component Communication - Non-Primitive Datatype Parent Componentexample:</h1>
+        <lightning-carousel disable-auto-scroll>
+            <template for:each={carouselData} for:item="carouselDataItem">
+            <lightning-carousel-image
+                key={carouselDataItem.header}
+                src={carouselDataItem.src}
+                header={carouselDataItem.header}
+                description={carouselDataItem.description}
+                alternative-text={carouselDataItem.alternativeText}>
+            </lightning-carousel-image>
+            </template>
+        </lightning-carousel>
+    </lightning-card>
+</template>

@@ -1,0 +1,63 @@
+<template>
+
+    <!--
+        ******** Component Communication - Primitive Datatype Child Component examples ********
+            - alert-message
+            - card-heading
+            - Append this in lightning-card to view this in the UI - visible-card="D"}
+
+        ********* Component Communication - Non-Primitive Datatype Parent Component examples ********
+            - card-heading-i-i
+            - carousel-data
+            - Append this in lightning-card to view this in the UI - visible-card="E"}
+
+        ******** Component Communication - Action from Parent Component example ********
+            - lightning-input
+            - Append this in lightning-card to view this in the UI - visible-card="B"}
+            
+        ******** Component Communication - Child to Parent example 1 ********
+            - lightning-button: Reset Slider
+            - Append this in child component connector to view this in the UI - visible-card="C"}
+
+        ******** Component Communication - Child to Parent Simple event example ********
+            - lightning-button: show modal
+            - Append this in child component connector to view this in the UI - visible-card="A"}
+    
+    -->
+    <lightning-card title="Component Communication">
+        <lightning-card class="slds-var-m-around_medium">
+            <div class="slds-var-m-around_medium" onclose={closeModalHandler}>
+                <lightning-button label="Show Modal" onclick={handleShowModal}></lightning-button>
+                <h1>{modalCloseMessage}</h1>
+                <template lwc:if={showModal}>
+                    <c-lwc-child-component-c-c
+                        visible-card="A">
+                    </c-lwc-child-component-c-c>
+                </template>
+            </div>
+        </lightning-card>
+        <lightning-card class="slds-m-bottom_small" lwc:if={showCardChildParentB}>
+            <h1 style="font-size: 15px; font-weight: bold; color: black;">Component Communication - Action from Parent Component example:</h1>
+            <lightning-input type="number" label="Enter percentage" onkeyup={changePercentValueHandler}></lightning-input>
+            <c-lwc-child-component-c-c>
+            </c-lwc-child-component-c-c>
+        </lightning-card>
+        <lightning-card class="slds-m-bottom_small" lwc:if={showCardChildParentC}>
+            <h1 style="font-size: 15px; font-weight: bold; color: black;">Component Communication - Child to Parent example:</h1>
+            <lightning-button variant="brand" label="Reset Slider" title="Reset Slider" onclick={handleResetSliderButtonClick} class="slds-m-left_x-small"></lightning-button>
+            <c-lwc-child-component-c-c
+                progress-bar-value={percentValue}>
+            </c-lwc-child-component-c-c>
+        </lightning-card>
+        <lightning-card class="slds-m-bottom_small">           
+            <c-lwc-Child-Component-C-C
+                alert-message = "I got the Data!">
+            </c-lwc-Child-Component-C-C>
+        </lightning-card>
+        <lightning-card class="slds-m-bottom_small">           
+            <c-lwc-Child-Component-C-C
+                carousel-data={carouselData}>
+            </c-lwc-Child-Component-C-C>
+        </lightning-card>    
+    </lightning-card>
+</template>

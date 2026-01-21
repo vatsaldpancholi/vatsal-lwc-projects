@@ -1,0 +1,21 @@
+
+p{
+    color: green;
+    font-size: 30px;
+    border: 1px solid red;
+}
+/*
+.divClass{
+    color: pink;
+    font-size: 20px;
+}
+
+.divClass:Hover{
+    font-size: 50px;
+    color: red;
+}
+*/
+div{
+    color: var(--slds-g-color-error-1);
+    background: white;
+}

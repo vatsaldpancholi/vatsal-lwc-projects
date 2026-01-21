@@ -1,0 +1,62 @@
+<template>
+    <!--lightning-card>
+        <h3 slot="title">
+            Card Title
+        </h3>
+        <div slot="actions">
+            <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+        </div>
+        <div slot="footer">
+                <h6>This is the footer</h6>
+        </div>
+    </lightning-card-->
+    <div class="slds-m-around_medium">
+        <c-custom-Lightning-Card>
+            <h3 slot="title">
+                Card Title
+            </h3>
+            <h3>
+                This is the body
+            </h3>
+            <div slot="actions">
+                <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+            </div>
+            <div slot="footer">
+                <h6>This is the footer</h6>
+            </div>
+        </c-custom-Lightning-Card>
+    </div>
+    <div class="slds-m-around_medium">
+        <c-custom-Lightning-Card>
+            <h3 slot="title">
+                Without Footer
+            </h3>
+            <h3>
+                This is the body
+            </h3>
+            <div slot="actions">
+                <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+            </div>
+        </c-custom-Lightning-Card>     
+    </div>
+    <div class="slds-m-around_medium">
+        <c-custom-Lightning-Card>
+            <h3 slot="title">
+                Without Action
+            </h3>
+            <h3>
+                This is the body
+            </h3>
+            <div slot="footer">
+                <h6>This is the footer</h6>
+            </div>
+        </c-custom-Lightning-Card>
+    </div>
+    <div class="slds-m-around_medium">
+        <c-custom-Lightning-Card>
+            <h3 slot="title">
+                Without action and footer
+            </h3>
+        </c-custom-Lightning-Card>
+    </div>
+</template>
