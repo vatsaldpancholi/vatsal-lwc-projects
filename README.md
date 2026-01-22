@@ -1,18 +1,47 @@
-# Salesforce DX Project: Next Steps
+# Vatsal LWC Projects 🚀
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A curated collection of **Salesforce Lightning Web Component (LWC)** projects showcasing real-world UI patterns, business logic, and best practices used in modern Salesforce implementations.
 
-## How Do You Plan to Deploy Your Changes?
+This repository is intended as a **portfolio and reference** for Salesforce developers, architects, and hiring teams.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+---
 
-## Configure Your Salesforce DX Project
+## 🔹 What This Repository Contains
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+This repo includes multiple **independent LWC examples and mini-projects**, each focused on solving a specific use case commonly encountered in Salesforce orgs, such as:
 
-## Read All About It
+- Dynamic and reusable UI components
+- Data-driven forms and layouts
+- Client-side and server-side interactions
+- Event handling and component communication
+- Best practices for maintainable and scalable LWCs
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Each project is structured to be **easy to understand, extend, and reuse**.
+
+---
+
+## 🧩 Technologies Used
+
+- **Salesforce Lightning Web Components (LWC)**
+- **Apex** (where server-side logic is required)
+- **Salesforce UI APIs**
+- **SLDS (Salesforce Lightning Design System)**
+
+---
+
+## 📁 Project Structure
+
+```text
+vatsal-lwc-projects/
+│
+├── force-app/
+│   └── main/
+│       └── default/
+│           ├── lwc/
+│           │   ├── component-one/
+│           │   ├── component-two/
+│           │   └── ...
+│           └── classes/
+│
+├── sfdx-project.json
+└── README.md
