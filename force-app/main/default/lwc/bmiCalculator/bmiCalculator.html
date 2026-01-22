@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="BMI Calculator">
+        <h1><strong>Please enter your information below:</strong></h1>
+        <p class="slds-p-around_small"><strong>Weight(in kgs)</strong></p><lightning-input type="number" step="0.1" onchange={captureWeight}></lightning-input>
+        <p class="slds-p-around_small"><strong>Height(in m)</strong></p><lightning-input type="number" step="0.01" onchange={captureHeight}></lightning-input>
+        <lightning-button label="Calculate BMI" onclick={calculateBMIHandler} class="slds-m-top_small"></lightning-button>
+        <p>Use the below chart for reference</p>
+        <p><strong>Underweight:</strong> Below 18.5</p>
+        <p><strong>Normal weight:</strong> 18.5 – 24.9</p>
+        <p><strong>Overweight:</strong> 25.0 – 29.9</p>
+        <p><strong>Obese:</strong> 30.0 or higher </p>
+    </lightning-card>
+    <lightning-card title="BMI Result">
+        <div class="slds-box slds-theme_shade slds-m-top_medium">
+            <template lwc:if={bmiScore}>
+                <div class={bmiCategoryIndicators}>
+                    <strong>BMI Score: {bmiScore}</strong> - {bmiLabels}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
