@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Product Details:">
+        <div class="slds-box slds-var-m-around_medium">
+            <div class="slds-p-around_small">
+                <p><strong>{productFromParent.name}</strong></p>
+                <p>{productFromParent.price}</p>
+            </div>
+            <lightning-button
+                variant="brand"
+                label="Select"
+                onclick={onClickHandler}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
