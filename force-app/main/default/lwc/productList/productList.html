@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Selected Product">
+        <div class="slds-p-around_medium">
+            <div class="slds-box slds-theme_info slds-var-m-around_medium">
+                <strong>Selected Product Name:</strong> {selectedProductDetail.name}
+            </div>
+            <div class="slds-grid slds-wrap">
+                <template for:each={productData} for:item="selectedProduct">
+                    <div key={selectedProduct.id} class="slds-col slds-size_1-of-3">
+                        <c-product-tile
+                            onproductselect={handleProductSelection}
+                            product-from-parent={selectedProduct}>
+                        </c-product-tile>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
