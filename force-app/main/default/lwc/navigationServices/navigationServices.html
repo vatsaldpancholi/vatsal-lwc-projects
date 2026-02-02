@@ -1,0 +1,135 @@
+<template>
+    <lightning-card
+        title="Navigation Services">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="6">
+                <lightning-card
+                    title="Navigation To Home Demo">
+                    
+                    <lightning-button
+                        variant="brand"
+                        label="Home Navigation"
+                        onclick={onClickHandlerHome}  >
+                    </lightning-button>
+                
+                </lightning-card>
+                <lightning-card
+                    title="Navigation To Chatter Demo">
+                    
+                    <lightning-button
+                        variant="brand"
+                        label="Chatter Navigation"
+                        onclick={onClickHandlerChatter}  >
+                    </lightning-button>
+                
+                </lightning-card>
+                <lightning-card
+                    title="Navigation To New Record">
+                    
+                    <lightning-button
+                        variant="brand"
+                        label="New RP Navigation I"
+                        onclick={onClickHandlerNewRecord}  >
+                    </lightning-button>
+                
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to New Record with default values">
+
+                    <lightning-button
+                        variant="brand"
+                        label="New RP Navigation II"
+                        onclick={onClickHandlerNewRecordWithDefault}>
+
+                    </lightning-button>
+
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to Tab Demo">
+                    <lightning-button
+                        variant="Brand"
+                        label="Tab Navigation"
+                        onclick={onClickHandlerTabNavigation}>
+
+                    </lightning-button>
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to External web page Demo">
+                    <lightning-button
+                        variant="Brand"
+                        label="Tab Navigation"
+                        onclick={onClickHandlerExternalPageNavigation}>
+
+                    </lightning-button>
+                </lightning-card>
+                <lightning-card
+                    title="Navigation Aura Demo">
+                    <lightning-button
+                        variant="Brand"
+                        label="Aura Navigation"
+                        onclick={onClickHandlerAuraRecord}>
+
+                    </lightning-button>
+                </lightning-card> 
+            </lightning-layout-item>
+            <lightning-layout-item size="6">
+                <lightning-card
+                    title="Navigation to List View Demo">
+
+                    <lightning-button
+                        variant="brand"
+                        label="List View Navigation"
+                        onclick={onClickHandlerListView}>
+                    </lightning-button>
+
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to File Demo">
+                    <lightning-button
+                        variant="Brand"
+                        label="File Navigation"
+                        onclick={onClickHandlerFile}>
+
+                    </lightning-button>
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to RP in View mode">
+                    <lightning-button
+                        variant="Brand"
+                        label="RP View Navigation"
+                        onclick={onClickHandlerViewNavigation}>
+                    </lightning-button>
+
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to RP in Edit mode">
+                    <lightning-button
+                        variant="Brand"
+                        label="RP Edit Navigation"
+                        onclick={onClickHandlerEditNavigation}>
+                    </lightning-button>
+
+                </lightning-card>
+                <lightning-card
+                    title="Navigation to Related Record Demo">
+                    <lightning-button
+                        variant="Brand"
+                        label="Related Record Navigation"
+                        onclick={onClickHandlerRelatedRecord}>
+
+                    </lightning-button>
+                </lightning-card>
+                <lightning-card
+                    title="Navigation LWC Demo">
+                    <lightning-button
+                        variant="Brand"
+                        label="LWC Navigation"
+                        onclick={onClickHandlerLWCRecord}>
+
+                    </lightning-button>
+                </lightning-card>                
+            </lightning-layout-item>
+        </lightning-layout>  
+     </lightning-card>
+    
+</template>
